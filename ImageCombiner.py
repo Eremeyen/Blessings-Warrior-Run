@@ -23,6 +23,21 @@ images = []
 for i in range(len(os.listdir(r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run"))-2):
     images.append("")
 
+background_names = {}
+bWing_names = {}
+tail_names = {}
+body_names = {}
+eye_names = {}
+fWing_names = {}
+hair_names = {}
+horn_names = {}
+helmet_names = {}
+sword_names = {}
+accessory_names = {}
+
+
+
+
 
 
 
@@ -193,25 +208,57 @@ def whichAccessory():
 
 
 
+Metadata = {}
 
 while(bCounter < 2532):
-    images[0] = Image.open(backgrounds + "/" + whichBackground()).convert("RGBA")
+    blessing = {}
+
+    wBackground = whichBackground()
+    images[0] = Image.open(backgrounds + "/" + wBackground).convert("RGBA")
+    blessing["Background"] = background_names[wBackground]
+    
     backW = whichBackWing()
     images[1] = Image.open(back_wings + "/" + backW).convert("RGBA")
+    blessing["Back Wing"] = bWing_names[backW]
+
     wTail = whichTail()
     images[2] = Image.open(tail + "/" + wTail).convert("RGBA")
-    images[3] = Image.open(bodies + "/" + whichBody()).convert("RGBA")
-    images[4] = Image.open(eyes + "/" + whichEye()).convert("RGBA")
+    blessing["Tail"] = tail_names[wTail]
+
+    wBody = whichBody()
+    images[3] = Image.open(bodies + "/" + wBody).convert("RGBA")
+    blessing["Body"] = body_names[wBody]
+
+    wEye = whichEye()
+    images[4] = Image.open(eyes + "/" + wEye).convert("RGBA")
+    blessing["Eyes"] = eye_names[wEye]
+
     #determining which front wing to use
     fWing = "WARRIOR FRONT WING " + backW[-5] + ".png"
     images[5] = Image.open(front_wings + "/" + fWing).convert("RGBA") #front wing
+    blessing["Front Wing"] = fWing_names[fWing]
+    
     #determining which hair to use
     wHair = "WARRIOR HAIR " + wTail[-5] + ".png"
     images[6] = Image.open(hair + "/" + wHair).convert("RGBA") #hair
-    images[7] = Image.open(horn + "/" + whichHorn()).convert("RGBA")
-    images[8] = Image.open(helmets + "/" + whichHelmet()).convert("RGBA")
-    images[9] = Image.open(sword + "/" + whichSword()).convert("RGBA")
-    images[10] = Image.open(accessories + "/" + whichAccessory()).convert("RGBA")
+    blessing["Hair"] = hair_names[wHair]
+
+    wHorn = whichHorn()
+    images[7] = Image.open(horn + "/" + wHorn).convert("RGBA")
+    blessing["Horn"] = horn_names[wHorn]
+
+    wHelmet = whichHelmet()
+    images[8] = Image.open(helmets + "/" + wHelmet).convert("RGBA")
+    blessing["Helmet"] = helmet_names[wHelmet]
+
+    wSword = whichSword()
+    images[9] = Image.open(sword + "/" + wSword).convert("RGBA")
+    blessing["Sword"] = sword_names[wSword]
+
+    wAccessory = whichAccessory()
+    images[10] = Image.open(accessories + "/" + wAccessory).convert("RGBA")
+    blessing["Accessory"] = accessory_names[wAccessory]
+
     final_image = images[0]
 
     #combining all layers
@@ -220,4 +267,15 @@ while(bCounter < 2532):
     #saving the image with the correct name and directory
     print(str(bCounter) + " images generated")
     final_image.save(finalImages+"/Blessings Warrior " +str(bCounter)+".png")
+    
+    if(bCounter < 10):
+        id = "Healer " + "000" + str(bCounter)
+    elif(bCounter < 100):
+        id = "Healer " + "00" + str(bCounter)
+    elif(bCounter < 1000):
+        id = "Healer "+ "0" + str(bCounter)
+    else:
+        id = str(bCounter)
+    Metadata[id] = blessing
+    
     bCounter += 1
