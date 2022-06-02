@@ -23,16 +23,88 @@ images = []
 for i in range(len(os.listdir(r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run"))-2):
     images.append("")
 
-background_names = {}
-bWing_names = {}
-tail_names = {}
-body_names = {}
-eye_names = {}
-fWing_names = {}
-hair_names = {}
-horn_names = {}
-helmet_names = {}
-sword_names = {}
+background_names = {
+    "WARRIOR GRADIENT BACKGROUND 1.png":,
+    "WARRIOR GRADIENT BACKGROUND 2.png":,
+    "WARRIOR GRADIENT BACKGROUND 3.png":,
+    "WARRIOR GRADIENT BACKGROUND 4.png":,
+    "WARRIOR GRADIENT BACKGROUND 5.png":,
+    "WARRIOR GRADIENT BACKGROUND 6.png":,
+    "WARRIOR GRADIENT BACKGROUND 7.png":,
+    "WARRIOR GRADIENT BACKGROUND 8.png":,
+    "WARRIOR GRADIENT BACKGROUND 9.png":,
+    "WARRIOR GRADIENT BACKGROUND 10.png":,
+    "WARRIOR RARE BACKGROUND 1.png":,
+    "WARRIOR RARE BACKGROUND 3.png":,
+    "WARRIOR RARE BACKGROUND 4.png":,
+    "WARRIOR RARE BACKGROUND 2.png":,
+    "WARRIOR RARE BACKGROUND 5.png":
+}
+bWing_names = {
+    "WARRIOR BACK WING 1.png":,
+    "WARRIOR BACK WING 2.png":,
+    "WARRIOR BACK WING 3.png":,
+    "WARRIOR BACK WING 4.png":,
+    "WARRIOR BACK WING 5.png":
+}
+tail_names = {
+    "WARRIOR TAIL 1.png":,
+    "WARRIOR TAIL 2.png":,
+    "WARRIOR TAIL 3.png":,
+    "WARRIOR TAIL 4.png":,
+    "WARRIOR TAIL 5.png":
+}
+body_names = {
+    "WARRIOR BODY 4.png":,
+    "WARRIOR BODY 6.png":,
+    "WARRIOR BODY 1.png":,
+    "WARRIOR BODY 3.png":,
+    "WARRIOR BODY 7.png":,
+    "WARRIOR BODY 8.png":
+}
+eye_names = {
+    "WARRIOR EYE F1.png":,
+    "WARRIOR EYE F2.png":,
+    "WARRIOR EYE F3.png":,
+    "WARRIOR EYE F4.png":,
+    "WARRIOR EYE M1.png":,
+    "WARRIOR EYE M2.png":,
+    "WARRIOR EYE M3.png":,
+    "WARRIOR EYE M4.png":
+}
+fWing_names = {
+    "WARRIOR FRONT WING 1.png":,
+    "WARRIOR FRONT WING 2.png":,
+    "WARRIOR FRONT WING 3.png":,
+    "WARRIOR FRONT WING 4.png":,
+    "WARRIOR FRONT WING 5.png":
+}
+hair_names = {
+    "WARRIOR HAIR 1.png":,
+    "WARRIOR HAIR 2.png":,
+    "WARRIOR HAIR 4.png":,
+    "WARRIOR HAIR 3.png":
+}
+horn_names = {
+    "WARRIOR HORN 3.png":,
+    "WARRIOR HORN 2.png":,
+    "WARRIOR HORN 4.png":,
+    "WARRIOR HORN 1.png":
+}
+helmet_names = {
+    "WARRIOR HELMET 1.png":,
+    "WARRIOR HELMET 2.png":,
+    "WARRIOR HELMET 3.png":,
+    "WARRIOR HELMET 4.png":,
+    "WARRIOR HELMET 5.png":,
+    "WARRIOR HELMET 6.png":,
+    "WARRIOR HELMET 7.png":,
+    "WARRIOR HELMET 8.png":,
+    "WARRIOR HELMET 9.png":
+}
+sword_names = {
+    
+}
 accessory_names = {}
 
 
@@ -265,7 +337,7 @@ while(bCounter < 2532):
     for i in range(1,len(images)):
         final_image = Image.alpha_composite(final_image,images[i])
     #saving the image with the correct name and directory
-    print(str(bCounter) + " images generated")
+    #print(str(bCounter) + " images generated")
     final_image.save(finalImages+"/Blessings Warrior " +str(bCounter)+".png")
     
     if(bCounter < 10):
