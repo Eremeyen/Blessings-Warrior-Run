@@ -312,6 +312,7 @@ while(bCounter < 2532):
     else:
         id = str(bCounter)
     blessing["id"] = int(id)
+    #blessing["tribe"] = "Warrior"
 
     wBackground = whichBackground()
     images[0] = Image.open(backgrounds + "/" + wBackground).convert("RGBA")
@@ -366,7 +367,7 @@ while(bCounter < 2532):
         final_image = Image.alpha_composite(final_image,images[i])
     #saving the image with the correct name and directory
     #print(str(bCounter) + " images generated")
-    final_image.save(finalImages+"/Blessings Warrior " +str(bCounter)+".png")
+    final_image.save(finalImages+"/" +str(bCounter)+".png")
     
     
     Metadata.append(blessing)
@@ -375,7 +376,7 @@ while(bCounter < 2532):
 
 
 #writing csv file
-main_info = ["id","Background","Back Wing","Tail","Body","Eyes","Front Wing","Hair","Horn","Helmet","Sword","Accessory"]
+main_info = ["id","tribe","Background","Back Wing","Tail","Body","Eyes","Front Wing","Hair","Horn","Helmet","Sword","Accessory"]
 
 with open("metadata.csv", "w") as csvfile:
     writer = csv.DictWriter(csvfile,fieldnames= main_info)
