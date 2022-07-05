@@ -5,23 +5,23 @@ from random import random
 import csv
 
 #attribute folders:
-backgrounds = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run\Backgrounds"
-back_wings = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run\Back_Wings"
-tail = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run\Tail"
-bodies = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run\Bodies"
-eyes = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run\Eye"
-front_wings = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run\Front_Wings"
-hair = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run\Hair"
-horn = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run\Horn"
-helmets = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run\Helmet"
-sword = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run\sword"
-accessories = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run\accessories"
+backgrounds = r"Backgrounds"
+back_wings = r"Back_Wings"
+tail = r"Tail"
+bodies = r"Bodies"
+eyes = r"Eye"
+front_wings = r"Front_Wings"
+hair = r"Hair"
+horn = r"Horn"
+helmets = r"Helmet"
+sword = r"sword"
+accessories = r"accessories"
 #final images destination
-finalImages = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run\Blessings"
+finalImages = r"Blessings"
 
 #defining an empty images array which we'll use to come up with each final image
 images = []
-for i in range(len(os.listdir(r"C:\Users\meren\OneDrive\Masaüstü\Blessings Warrior Run"))-3):
+for i in range(len(os.listdir("."))-3):
     images.append("")
 
 background_names = {
